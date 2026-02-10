@@ -1,0 +1,132 @@
+[
+  {
+    "code": "TMF1",
+    "name": "Kalina",
+    "fullName": "TMF1 - Kalina",
+    "lat": 19.071413,
+    "lng": 72.866028,
+    "zone": "Western Suburbs",
+    "capacity": "45k Orders/Day",
+    "services": ["Dark Store", "Last-Mile"]
+  },
+  {
+    "code": "TMA7",
+    "name": "Nerul",
+    "fullName": "TMA7 - Nerul",
+    "lat": 19.048046,
+    "lng": 73.024608,
+    "zone": "Navi Mumbai",
+    "capacity": "50k Orders/Day",
+    "services": ["Dark Store", "Cold Chain"]
+  },
+  {
+    "code": "TME9",
+    "name": "Mazgaon",
+    "fullName": "TME9 - Mazgaon",
+    "lat": 18.964138,
+    "lng": 72.840198,
+    "zone": "South Mumbai",
+    "capacity": "40k Orders/Day",
+    "services": ["Dark Store", "Last-Mile"]
+  },
+  {
+    "code": "TME4",
+    "name": "Vashi",
+    "fullName": "TME4 - Vashi",
+    "lat": 19.084435,
+    "lng": 73.007458,
+    "zone": "Navi Mumbai",
+    "capacity": "60k Orders/Day",
+    "services": ["Dark Store", "Last-Mile"]
+  },
+  {
+    "code": "TMA9",
+    "name": "Kamothe",
+    "fullName": "TMA9 - Kamothe",
+    "lat": 19.018225,
+    "lng": 73.103433,
+    "zone": "Navi Mumbai",
+    "capacity": "35k Orders/Day",
+    "services": ["Dark Store", "Cold Chain"]
+  },
+  {
+    "code": "TMF5",
+    "name": "Sanpada",
+    "fullName": "TMF5 - Sanpada",
+    "lat": 19.060942,
+    "lng": 73.014653,
+    "zone": "Navi Mumbai",
+    "capacity": "48k Orders/Day",
+    "services": ["Dark Store", "Last-Mile"]
+  },
+  {
+    "code": "TMJ3",
+    "name": "Fort",
+    "fullName": "TMJ3 - Fort",
+    "lat": 18.934138,
+    "lng": 72.834194,
+    "zone": "South Mumbai",
+    "capacity": "55k Orders/Day",
+    "services": ["Dark Store", "Last-Mile"]
+  },
+  {
+    "code": "TMJ6",
+    "name": "Worli",
+    "fullName": "TMJ6 - Worli",
+    "lat": 18.995001,
+    "lng": 72.815405,
+    "zone": "South Mumbai",
+    "capacity": "52k Orders/Day",
+    "services": ["Dark Store", "Cold Chain"]
+  },
+  {
+    "code": "TMG6",
+    "name": "Mahape",
+    "fullName": "TMG6 - Mahape",
+    "lat": 19.113947,
+    "lng": 73.012372,
+    "zone": "Navi Mumbai",
+    "capacity": "42k Orders/Day",
+    "services": ["Dark Store", "Last-Mile"]
+  },
+  {
+    "code": "TMJ7",
+    "name": "Marine Lines",
+    "fullName": "TMJ7 - Marine Line",
+    "lat": 18.941566,
+    "lng": 72.828082,
+    "zone": "South Mumbai",
+    "capacity": "38k Orders/Day",
+    "services": ["Dark Store", "Last-Mile"]
+  },
+  {
+    "code": "TMH6",
+    "name": "Rajdhan Villa",
+    "fullName": "TMH6 - Rajdhan Villa",
+    "lat": 18.957083,
+    "lng": 72.814414,
+    "zone": "South Mumbai",
+    "capacity": "30k Orders/Day",
+    "services": ["Dark Store", "Cold Chain"]
+  },
+  {
+    "code": "TMH7",
+    "name": "Versova",
+    "fullName": "TMH7 - Versova",
+    "lat": 19.135028,
+    "lng": 72.813222,
+    "zone": "Western Suburbs",
+    "capacity": "46k Orders/Day",
+    "services": ["Dark Store", "Last-Mile"]
+  },
+  {
+    "code": "TMJ5",
+    "name": "Kharghar",
+    "fullName": "TMJ5 - Kharghar",
+    "lat": 19.041171,
+    "lng": 73.071878,
+    "zone": "Navi Mumbai",
+    "capacity": "44k Orders/Day",
+    "services": ["Dark Store", "Cold Chain", "Last-Mile"]
+  }
+]
