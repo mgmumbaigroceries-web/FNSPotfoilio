@@ -87,7 +87,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="text-sm font-medium text-forest mb-1">Phone</p>
-                      <p className="text-sm text-forest/60">+91 (000) 000-0000</p>
+                      <p className="text-sm text-forest/60">+91 7977180756</p>
                     </div>
                   </div>
 
@@ -97,7 +97,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="text-sm font-medium text-forest mb-1">Email</p>
-                      <p className="text-sm text-forest/60">info@freshandselect.in</p>
+                      <p className="text-sm text-forest/60">ajay@kyro.in</p>
                     </div>
                   </div>
 
@@ -128,7 +128,7 @@ export default function Contact() {
                     "30+ years of leadership experience",
                     "99.9% inventory accuracy",
                     "Trusted by Zepto, Blinkit, Amazon Now",
-                    "Ozone washing & cold chain protocols",
+                    "Cold chain protocols",
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-3">
                       <CheckCircle2 size={16} className="text-sap flex-shrink-0" />

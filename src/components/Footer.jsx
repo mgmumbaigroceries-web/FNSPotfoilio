@@ -77,11 +77,11 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Phone size={16} className="text-coral flex-shrink-0" />
-                <span className="text-sm text-cream-200/70">+91 (000) 000-0000</span>
+                <span className="text-sm text-cream-200/70">+91 7977180756</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail size={16} className="text-coral flex-shrink-0" />
-                <span className="text-sm text-cream-200/70">info@freshandselect.in</span>
+                <span className="text-sm text-cream-200/70">ajay@kyro.in</span>
               </div>
             </div>
           </div>
@@ -93,9 +93,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Fresh & Select Groceries Pvt. Ltd. All Rights Reserved.
           </p>
           <div className="flex items-center gap-6">
-            <span className="text-xs text-cream-200/50">
-              CIN: XXXXXXXXXX
-            </span>
+
           </div>
         </div>
       </div>
