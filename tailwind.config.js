@@ -52,8 +52,8 @@ export default {
         },
       },
       fontFamily: {
-        heading: ["'Space Grotesk'", "sans-serif"],
-        body: ["'Inter'", "sans-serif"],
+        heading: ["'Manrope'", "sans-serif"],
+        body: ["'Manrope'", "sans-serif"],
       },
       animation: {
         "marquee": "marquee 25s linear infinite",

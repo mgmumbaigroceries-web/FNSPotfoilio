@@ -2,7 +2,6 @@ import {
   Warehouse,
   Users,
   BarChart3,
-  Snowflake,
   ArrowRight,
   CheckCircle2,
 } from "lucide-react";
@@ -11,7 +10,6 @@ const services = [
   {
     icon: <Warehouse className="w-8 h-8" />,
     title: "Dark Store Management",
-    subtitle: "End-to-End Facility Operations",
     description:
       "Complete facility setup including racking systems, dispatch zones, staging areas, and real-time inventory management. We handle every aspect—from warehouse design to daily operations—so platforms can focus on growth.",
     features: [
@@ -24,7 +22,6 @@ const services = [
   {
     icon: <Users className="w-8 h-8" />,
     title: "Manpower & Training",
-    subtitle: "Specialized Quick Commerce Workforce",
     description:
       "Recruitment, training, and management of specialized pickers, packers, and supervisors for high-velocity dark store environments. FIFO-certified staff ensuring <2 minute average pack times.",
     features: [
@@ -37,7 +34,6 @@ const services = [
   {
     icon: <BarChart3 className="w-8 h-8" />,
     title: "Inventory Intelligence",
-    subtitle: "Tech-Enabled Shrinkage Control",
     description:
       "Data-driven inventory management powered by analytics dashboards. Our tech stack monitors shrinkage, tracks expiry, optimizes pick-paths, and maintains 99.9% inventory accuracy in real-time.",
     features: [
@@ -48,16 +44,15 @@ const services = [
     ],
   },
   {
-    icon: <Snowflake className="w-8 h-8" />,
-    title: "Cold Chain Integrity",
-    subtitle: "Temperature-Controlled Excellence",
+    icon: <Warehouse className="w-8 h-8" />,
+    title: "Precision Store Design",
     description:
-      "Dedicated temperature-controlled zones ensuring fresh produce, dairy, and frozen goods maintain quality from warehouse to doorstep. Ozone washing protocols for enhanced food safety compliance.",
+      "Precision-based dark store layout designed for speed, accuracy, and space efficiency. Layout engineering is paired with real-time inventory synchronization to keep every SKU in the right place.",
     features: [
-      "Multi-zone temperature control",
-      "Ozone washing protocols",
-      "Cold chain compliance logging",
-      "Fresh produce quality assurance",
+      "Precision-based dark store layout",
+      "Pick-path and zone optimization",
+      "Real-time inventory synchronization",
+      "Slotting and replenishment logic",
     ],
   },
 ];
@@ -87,7 +82,7 @@ export default function Services() {
           {services.map((service, i) => (
             <div
               key={i}
-              className={`group relative bg-white rounded-3xl border border-forest/5 overflow-hidden hover:shadow-xl transition-all duration-500 ${
+              className={`group relative bg-[#FDFCF8] rounded-3xl border border-forest/5 overflow-hidden hover:shadow-xl transition-all duration-500 ${
                 i % 2 === 0 ? "" : ""
               }`}
             >
@@ -154,28 +149,46 @@ export default function Services() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              { step: "01", title: "Assessment", desc: "Site audit, demand mapping, and capacity planning." },
-              { step: "02", title: "Setup", desc: "Facility design, racking, cold chain installation." },
-              { step: "03", title: "Staffing", desc: "Recruit, train, and deploy FIFO-certified teams." },
-              { step: "04", title: "Go Live", desc: "Launch operations with real-time monitoring dashboards." },
-            ].map((item, i) => (
-              <div key={i} className="relative">
-                <div className="text-6xl font-heading font-bold text-forest/5 mb-2">
-                  {item.step}
-                </div>
-                <h3 className="font-heading text-lg font-semibold text-forest mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-forest/60 leading-relaxed">{item.desc}</p>
-                {i < 3 && (
-                  <div className="hidden md:block absolute top-8 right-0 translate-x-1/2">
-                    <ArrowRight className="text-forest/15" size={24} />
+          <div className="relative">
+            {/* Step cards */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              {([
+                { step: "01", title: "Assessment", desc: "Site audit, demand mapping, and capacity planning." },
+                { step: "02", title: "Setup", desc: "Precision-based dark store layout, racking, and real-time inventory synchronization." },
+                { step: "03", title: "Staffing", desc: "Recruit, train, and deploy FIFO-certified teams." },
+                { step: "04", title: "Go Live", desc: "Launch operations with real-time monitoring dashboards." },
+              ]).map((item, i) => (
+                <div key={i} className="relative text-center flex flex-col items-center">
+                  <div className="text-6xl font-heading font-bold text-forest/25 mb-2">
+                    {item.step}
                   </div>
-                )}
+                  <h3 className="font-heading text-lg font-semibold text-forest mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-forest/60 leading-relaxed max-w-xs mx-auto">{item.desc}</p>
+                  {i < 3 && (
+                    <div className="hidden md:block absolute top-8 right-0 translate-x-1/2">
+                      <ArrowRight className="text-forest/15" size={24} />
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* Animated rail below steps — aligned to column centers */}
+            <div className="hidden md:block mt-10">
+              <div className="relative h-[2px] bg-forest/10 rounded-full"
+                style={{ marginLeft: 'calc(12.5%)', marginRight: 'calc(12.5%)' }}>
+                {/* Milestone markers at each column center */}
+                <div className="process-milestone" style={{ left: '0%' }} />
+                <div className="process-milestone" style={{ left: '33.33%' }} />
+                <div className="process-milestone" style={{ left: '66.66%' }} />
+                <div className="process-milestone" style={{ left: '100%' }} />
+
+                {/* Single animated dot */}
+                <div className="process-dot" />
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>

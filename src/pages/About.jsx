@@ -9,38 +9,42 @@ import {
 } from "lucide-react";
 import ajayImg from "../assets/AjayR.jpg";
 import rohanImg from "../assets/RohanR.jpg";
+import mangalaPatternOne from "../assets/mangala pattern-1.png";
+import mangalaPatternTwo from "../assets/mangala pattern-2.png";
+import mangalaPatternThree from "../assets/mangala pattern-3.png";
 
 const leadership = [
   {
     name: "Ajay Ramani",
-    role: "Director & Founder",
-    tagline: "The Strategic Architect",
+    role: "Founder & Director",
+    tagline: "",
     image: ajayImg,
     initials: "AR",
-    bio: "A seasoned industry veteran with over 30 years of executive experience across Telecom, Distribution, and High-Volume Sales. Rising from humble roots in Madhya Pradesh to key leadership roles at global conglomerates like Samsung, Reliance, and Tata Group, Ajay is the operational bedrock of Fresh & Select.",
+    bio:
+      "A veteran of scale with over 30 years of executive leadership in Telecom, FMCG distribution, and Sales. Ajay’s career tracks the growth of modern India, from humble beginnings in Madhya Pradesh to commanding roles at Samsung, Reliance, and the Tata Group.",
     extendedBio:
-      "A serial entrepreneur and distinguished visiting consultant to leading hedge funds, he ensures the company operates with the financial discipline of a Fortune 500 firm and the agility of a startup.",
+      "As the architect of Fresh & Select, he combines deep operational grit with high-level corporate governance. A serial entrepreneur and advisor to hedge funds, Ajay brings the stability required for public markets while retaining the aggressive execution speed needed to win the hyper-local category.",
     highlights: [
       { icon: <Briefcase size={16} />, text: "30+ Years Executive Experience" },
       { icon: <Building2 size={16} />, text: "Samsung, Reliance, Tata Group" },
       { icon: <TrendingUp size={16} />, text: "Serial Entrepreneur" },
-      { icon: <Award size={16} />, text: "Hedge Fund Consultant" },
+      { icon: <Award size={16} />, text: "Hedge Fund Advisor" },
     ],
   },
   {
-    name: "Rohan Ajay Ramani",
-    role: "Director — Ops & Tech",
-    tagline: "The Tech Operator",
+    name: "Rohan Ramani",
+    role: "Director of Operations & Technology",
+    tagline: "",
     image: rohanImg,
     initials: "RR",
-    bio: "Rohan brings Silicon Valley-grade process efficiency to logistics. An IIT Madras Data Science alumnus and SRM Academic Medalist, his background is steeped in high-frequency technology.",
+    bio:
+      "Rohan engineers the precision behind every delivery. An IIT Madras Data Science alumnus and SRM Academic Medalist, he translates high-frequency trading technology into hyper-local logistics.",
     extendedBio:
-      "Formerly a Software Engineer at JPMorgan Chase, he optimizes global market ecosystems. At Fresh & Select, he applies this rigor to the ground level — implementing Ozone washing for safety and data analytics for pick-path optimization. A former Airbnb Superhost and Associate at Adani Wilmar, Rohan ensures every dark store runs like a refined algorithm.",
+      "Previously a Software Development Engineer at JPMorgan Chase, Rohan built systems designed for zero-latency markets. At Fresh & Select, he applies that same engineering rigor to dark store automation by deploying proprietary algorithms for pick-path optimization. He ensures that our physical operations run with the predictability and speed of software code.",
     highlights: [
       { icon: <GraduationCap size={16} />, text: "IIT Madras — Data Science" },
-      { icon: <Code2 size={16} />, text: "Ex-JPMorgan Chase Engineer" },
       { icon: <Award size={16} />, text: "SRM Academic Medalist" },
-      { icon: <Building2 size={16} />, text: "Ex-Adani Wilmar Associate" },
+      { icon: <Code2 size={16} />, text: "Ex-JPMorgan Chase Engineer" },
     ],
   },
 ];
@@ -64,49 +68,20 @@ export default function About() {
         </div>
       </section>
 
-      {/* ─── Company Story ─── */}
+      {/* ─── Company Profile ─── */}
       <section className="py-20 px-6">
         <div className="mx-auto max-w-4xl">
-          <div className="bg-white rounded-3xl border border-forest/5 p-8 md:p-12 shadow-sm">
+          <div className="bg-[#FDFCF8] rounded-3xl border border-forest/5 p-8 md:p-12 shadow-sm">
             <h2 className="font-heading text-2xl md:text-3xl font-bold text-forest mb-6">
-              About Fresh & Select
+              Company Profile
             </h2>
             <div className="space-y-4 text-forest/70 leading-relaxed">
               <p>
-                <strong className="text-forest">Fresh & Select Groceries Private Limited</strong> is
-                India's premier warehousing and fulfillment agency, specializing in dark
-                store operations for the Quick Commerce sector.
+                <strong className="text-forest">Fresh & Select Groceries Private Limited</strong> is the operating backbone for India’s Quick Commerce sector. We manage a calibrated network of 25+ hubs across the Mumbai Metropolitan Region for the industry's defining platforms including Zepto, Blinkit, and Amazon Now.
               </p>
               <p>
-                We manage a network of <strong className="text-forest">25+ dark stores</strong> for
-                India's leading platforms — Zepto, Blinkit, and Amazon Now — processing
-                thousands of orders daily across the Mumbai Metropolitan Region.
+                Our mission is to bring institutional-grade discipline to the hyper-local ecosystem. We bridge the gap between complex inventory systems and ground-level execution. From precision-based dark store layout design to real-time inventory synchronization, we ensure that thousands of daily orders are processed with speed, accuracy, and zero downtime.
               </p>
-              <p>
-                Our mission is simple: bring institutional-grade operational excellence to
-                the hyper-local delivery ecosystem. From Ozone washing protocols to
-                AI-powered inventory management, we combine grassroots operational scale
-                with cutting-edge technology.
-              </p>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10 pt-10 border-t border-forest/5">
-              {[
-                { value: "25+", label: "Dark Stores" },
-                { value: "30+", label: "Years Experience" },
-                { value: "99.9%", label: "Accuracy Rate" },
-                { value: "3", label: "Platform Partners" },
-              ].map((stat, i) => (
-                <div key={i} className="text-center">
-                  <div className="font-heading text-2xl md:text-3xl font-bold text-forest">
-                    {stat.value}
-                  </div>
-                  <div className="text-xs text-forest/50 font-medium mt-1">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </div>
@@ -128,17 +103,26 @@ export default function About() {
             {leadership.map((person, i) => (
               <div
                 key={i}
-                className="bg-white rounded-3xl border border-forest/5 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
+                className="bg-[#FDFCF8] rounded-3xl border border-forest/5 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
               >
                 <div className="flex flex-col lg:flex-row">
                   {/* Photo / Avatar Side */}
-                  <div className="lg:w-80 bg-gradient-to-br from-forest to-forest-600 flex items-center justify-center p-12 lg:p-16">
-                    <div className="w-40 h-40 rounded-full bg-white/10 border-4 border-white/20 overflow-hidden flex items-center justify-center">
+                  <div className="lg:w-80 bg-[#FCF8F0] relative overflow-hidden flex items-center justify-center p-12 lg:p-16">
+                    <div
+                      className="absolute inset-0 pointer-events-none opacity-[0.12]"
+                      style={{
+                        backgroundImage: `url(${mangalaPatternOne}), url(${mangalaPatternTwo}), url(${mangalaPatternThree})`,
+                        backgroundRepeat: "repeat",
+                        backgroundSize: "220px auto, 200px auto, 240px auto",
+                        backgroundPosition: "left top, center, right bottom",
+                      }}
+                    />
+                    <div className="relative z-10 w-48 h-48 rounded-full bg-[#FCF8F0] border-4 border-forest/40 overflow-hidden flex items-center justify-center">
                       {person.image ? (
                         <img
                           src={person.image}
                           alt={person.name}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-cover object-top"
                         />
                       ) : (
                         <span className="font-heading text-5xl font-bold text-white">

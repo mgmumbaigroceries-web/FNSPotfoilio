@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, useMap, ZoomControl } from "react-leaflet";
 import L from "leaflet";
 import { MapPin, Package, Thermometer } from "lucide-react";
 import storesData from "../data/stores.json";
@@ -121,7 +121,7 @@ export default function NetworkMap() {
             {/* Sidebar */}
             <div className="lg:w-80 flex-shrink-0">
               {/* Zone Filter */}
-              <div className="bg-white rounded-2xl border border-forest/10 p-6 shadow-sm mb-6">
+              <div className="bg-[#FDFCF8] rounded-2xl border border-forest/10 p-6 shadow-sm mb-6">
                 <h3 className="font-heading text-lg font-semibold text-forest mb-4">
                   Mumbai Zones
                 </h3>
@@ -146,7 +146,7 @@ export default function NetworkMap() {
                       <span
                         className={`text-xs px-2 py-0.5 rounded-full ${
                           activeZone === zone
-                            ? "bg-white/20 text-white"
+                            ? "bg-[#FDFCF8]/20 text-white"
                             : "bg-forest/10 text-forest/60"
                         }`}
                       >
@@ -161,7 +161,7 @@ export default function NetworkMap() {
               </div>
 
               {/* Store List */}
-              <div className="bg-white rounded-2xl border border-forest/10 p-6 shadow-sm">
+              <div className="bg-[#FDFCF8] rounded-2xl border border-forest/10 p-6 shadow-sm">
                 <h3 className="font-heading text-lg font-semibold text-forest mb-4">
                   Active Stores ({filteredStores.length})
                 </h3>
@@ -214,7 +214,7 @@ export default function NetworkMap() {
               onClick={() => setIsMapInteractive(true)}
             >
               {!isMapInteractive && (
-                <div className="absolute right-4 top-4 z-10 rounded-full bg-white/90 px-4 py-2 text-xs font-semibold text-forest/70 shadow">
+                <div className="absolute right-4 top-4 z-10 rounded-full bg-[#FDFCF8]/90 px-4 py-2 text-xs font-semibold text-forest/70 shadow">
                   Click map to enable
                 </div>
               )}
@@ -222,7 +222,7 @@ export default function NetworkMap() {
                 center={center}
                 zoom={11}
                 className="w-full h-full min-h-[600px]"
-                zoomControl={isMapInteractive}
+                zoomControl={false}
                 scrollWheelZoom={isMapInteractive}
                 dragging={isMapInteractive}
                 doubleClickZoom={isMapInteractive}
@@ -230,6 +230,7 @@ export default function NetworkMap() {
                 boxZoom={isMapInteractive}
                 keyboard={isMapInteractive}
               >
+                {isMapInteractive && <ZoomControl position="topleft" />}
                 <TileLayer
                   attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

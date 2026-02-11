@@ -1,4 +1,7 @@
 import { useEffect, useRef, useState } from "react";
+import mangalaPatternOne from "../assets/mangala pattern-1.png";
+import mangalaPatternTwo from "../assets/mangala pattern-2.png";
+import mangalaPatternThree from "../assets/mangala pattern-3.png";
 
 function AnimatedCounter({ end, suffix = "", duration = 2000 }) {
   const [count, setCount] = useState(0);
@@ -78,16 +81,28 @@ export default function MetricsTicker() {
       {metrics.map((metric, i) => (
         <div
           key={i}
-          className="relative group bg-cream/90 border border-forest/10 rounded-2xl p-6 text-center shadow-md shadow-forest/10 transition-all duration-300"
+          className="relative group bg-[#FCF8F0] border border-forest/10 rounded-2xl p-6 text-center shadow-md shadow-forest/10 transition-all duration-300 overflow-hidden"
         >
-          <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-forest/5 text-forest mb-3">
-            {metric.icon}
+          <div
+            className="absolute inset-0 pointer-events-none opacity-[0.12]"
+            style={{
+              backgroundImage: `url(${mangalaPatternOne}), url(${mangalaPatternTwo}), url(${mangalaPatternThree})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "520px auto, 520px auto, 520px auto",
+              backgroundPosition: "-80px -60px, 50% 10%, calc(100% + 60px) calc(100% + 40px)",
+            }}
+          />
+
+          <div className="relative z-10">
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-forest/5 text-forest mb-3">
+              {metric.icon}
+            </div>
+            <div className="font-heading text-3xl font-bold text-forest">
+              {metric.prefix || ""}
+              <AnimatedCounter end={metric.value} suffix={metric.suffix} />
+            </div>
+            <p className="text-sm text-forest/60 mt-1 font-medium">{metric.label}</p>
           </div>
-          <div className="font-heading text-3xl font-bold text-forest">
-            {metric.prefix || ""}
-            <AnimatedCounter end={metric.value} suffix={metric.suffix} />
-          </div>
-          <p className="text-sm text-forest/60 mt-1 font-medium">{metric.label}</p>
         </div>
       ))}
     </div>

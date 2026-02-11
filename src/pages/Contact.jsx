@@ -61,7 +61,7 @@ export default function Contact() {
           <div className="flex flex-col lg:flex-row gap-12">
             {/* ─── Contact Info ─── */}
             <div className="lg:w-96 flex-shrink-0">
-              <div className="bg-white rounded-3xl border border-forest/5 p-8 shadow-sm mb-6">
+              <div className="bg-[#FDFCF8] rounded-3xl border border-forest/5 p-8 shadow-sm mb-6">
                 <h3 className="font-heading text-xl font-semibold text-forest mb-6">
                   Corporate Office
                 </h3>
@@ -141,7 +141,7 @@ export default function Contact() {
 
             {/* ─── Contact Form ─── */}
             <div className="flex-1">
-              <div className="bg-white rounded-3xl border border-forest/5 p-8 md:p-12 shadow-sm">
+              <div className="bg-[#FDFCF8] rounded-3xl border border-forest/5 p-8 md:p-12 shadow-sm">
                 {submitted ? (
                   <div className="text-center py-16">
                     <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-sap/10 mb-6">

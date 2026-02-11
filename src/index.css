@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,7 +6,11 @@
 
 @layer base {
   :root {
-    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  }
+
+  * {
+    font-family: inherit;
   }
 
   html {
@@ -14,11 +18,11 @@
   }
 
   body {
-    @apply bg-cream text-forest antialiased;
+    @apply bg-cream text-forest antialiased font-body;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Manrope', sans-serif;
   }
 
   a {
@@ -30,6 +34,94 @@
 .leaflet-container {
   z-index: 1;
   border-radius: 0.75rem;
+}
+
+.leaflet-control-zoom.leaflet-bar {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid rgba(10, 57, 37, 0.12);
+  background: #FDFCF8;
+  border-radius: 999px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(10, 57, 37, 0.08);
+}
+
+.leaflet-control-zoom.leaflet-bar a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-right: 1px solid rgba(10, 57, 37, 0.08);
+  color: #0A3925;
+  background: transparent;
+  font-weight: 600;
+}
+
+.leaflet-control-zoom.leaflet-bar a:last-child {
+  border-right: 0;
+}
+
+.leaflet-control-zoom.leaflet-bar a:hover {
+  background: rgba(10, 57, 37, 0.06);
+}
+
+.leaflet-control-zoom.leaflet-bar a:focus {
+  outline: 2px solid rgba(10, 57, 37, 0.25);
+  outline-offset: 1px;
+}
+
+/* Process section animation */
+
+/* Milestone markers — static dots on the rail */
+.process-milestone {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(10, 57, 37, 0.18);
+  z-index: 2;
+}
+
+/* Single travelling dot */
+.process-dot {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: #0A3925;
+  z-index: 3;
+  animation: dot-journey 10s ease-in-out infinite;
+}
+
+@keyframes dot-journey {
+  /* Start at 01 — glow */
+  0%    { left: 0%;      box-shadow: 0 0 12px 5px rgba(10, 57, 37, 0.35); }
+  8%    { left: 0%;      box-shadow: 0 0 0  4px rgba(10, 57, 37, 0.10); }
+  /* Travel to 02 */
+  20%   { left: 33.33%;  box-shadow: 0 0 0  4px rgba(10, 57, 37, 0.10); }
+  /* Pause at 02 — glow */
+  22%   { left: 33.33%;  box-shadow: 0 0 12px 5px rgba(10, 57, 37, 0.35); }
+  30%   { left: 33.33%;  box-shadow: 0 0 0  4px rgba(10, 57, 37, 0.10); }
+  /* Travel to 03 */
+  42%   { left: 66.66%;  box-shadow: 0 0 0  4px rgba(10, 57, 37, 0.10); }
+  /* Pause at 03 — glow */
+  44%   { left: 66.66%;  box-shadow: 0 0 12px 5px rgba(10, 57, 37, 0.35); }
+  52%   { left: 66.66%;  box-shadow: 0 0 0  4px rgba(10, 57, 37, 0.10); }
+  /* Travel to 04 */
+  64%   { left: 100%;    box-shadow: 0 0 0  4px rgba(10, 57, 37, 0.10); }
+  /* Pause at 04 — glow */
+  66%   { left: 100%;    box-shadow: 0 0 12px 5px rgba(10, 57, 37, 0.35); }
+  74%   { left: 100%;    box-shadow: 0 0 0  4px rgba(10, 57, 37, 0.10); }
+  /* Return to start */
+  92%   { left: 0%;      box-shadow: 0 0 0  4px rgba(10, 57, 37, 0.10); }
+  100%  { left: 0%;      box-shadow: 0 0 12px 5px rgba(10, 57, 37, 0.35); }
 }
 
 /* Custom scrollbar */

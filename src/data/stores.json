@@ -128,5 +128,35 @@
     "zone": "Navi Mumbai",
     "capacity": "44k Orders/Day",
     "services": ["Dark Store", "Cold Chain", "Last-Mile"]
+  },
+  {
+    "code": "TMJ9",
+    "name": "Dadar",
+    "fullName": "TMJ9 - Dadar",
+    "lat": 19.015,
+    "lng": 72.838111,
+    "zone": "South Mumbai",
+    "capacity": "40k Orders/Day",
+    "services": ["Dark Store", "Last-Mile"]
+  },
+  {
+    "code": "TMK1",
+    "name": "Lower Parel",
+    "fullName": "TMK1 - Lower Parel",
+    "lat": 18.999139,
+    "lng": 72.830167,
+    "zone": "South Mumbai",
+    "capacity": "42k Orders/Day",
+    "services": ["Dark Store", "Last-Mile"]
+  },
+  {
+    "code": "TMK3",
+    "name": "Thane",
+    "fullName": "TMK3 - Thana",
+    "lat": 19.19825,
+    "lng": 72.974222,
+    "zone": "Thane",
+    "capacity": "38k Orders/Day",
+    "services": ["Dark Store", "Last-Mile"]
   }
 ]
