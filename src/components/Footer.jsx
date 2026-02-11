@@ -11,7 +11,7 @@ export default function Footer() {
               Fresh & Select
             </h3>
             <p className="text-sm text-cream-200/70 leading-relaxed">
-              India's premier warehousing and fulfillment agency. Managing 25+ dark stores powering the Quick Commerce revolution.
+              India's premier warehousing and fulfillment agency. Managing 20+ dark stores powering the Quick Commerce revolution.
             </p>
           </div>
 

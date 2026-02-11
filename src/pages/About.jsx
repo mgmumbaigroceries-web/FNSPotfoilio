@@ -77,7 +77,7 @@ export default function About() {
             </h2>
             <div className="space-y-4 text-forest/70 leading-relaxed">
               <p>
-                <strong className="text-forest">Fresh & Select Groceries Private Limited</strong> is the operating backbone for India’s Quick Commerce sector. We manage a calibrated network of 25+ hubs across the Mumbai Metropolitan Region for the industry's defining platforms including Zepto, Blinkit, and Amazon Now.
+                <strong className="text-forest">Fresh & Select Groceries Private Limited</strong> is the operating backbone for India’s Quick Commerce sector. We manage a calibrated network of 20+ hubs across the Mumbai Metropolitan Region for the industry's defining platforms including Zepto, Blinkit, and Amazon Now.
               </p>
               <p>
                 Our mission is to bring institutional-grade discipline to the hyper-local ecosystem. We bridge the gap between complex inventory systems and ground-level execution. From precision-based dark store layout design to real-time inventory synchronization, we ensure that thousands of daily orders are processed with speed, accuracy, and zero downtime.

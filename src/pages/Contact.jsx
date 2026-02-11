@@ -124,7 +124,7 @@ export default function Contact() {
                 </h3>
                 <div className="space-y-4">
                   {[
-                    "25+ operational dark stores",
+                    "20+ operational dark stores",
                     "30+ years of leadership experience",
                     "99.9% inventory accuracy",
                     "Trusted by Zepto, Blinkit, Amazon Now",

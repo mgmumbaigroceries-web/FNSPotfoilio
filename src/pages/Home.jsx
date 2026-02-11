@@ -27,7 +27,7 @@ export default function Home() {
             </h1>
 
             <p className="text-base font-semibold text-forest/70 max-w-2xl mx-auto mb-6 leading-relaxed">
-              Powering 25+ hubs with speed, precision, and a hyper-local network.
+              Powering 20+ hubs with speed, precision, and a hyper-local network.
             </p>
 
             <div className="flex flex-col items-center gap-3 mb-10">
