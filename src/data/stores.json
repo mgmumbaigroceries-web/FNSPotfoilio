@@ -158,5 +158,25 @@
     "zone": "Thane",
     "capacity": "38k Orders/Day",
     "services": ["Dark Store", "Last-Mile"]
+  },
+  {
+    "code": "TMK2",
+    "name": "Kanjurmarg",
+    "fullName": "TMK2 - Kanjurmarg",
+    "lat": 19.128278,
+    "lng": 72.937805,
+    "zone": "Eastern Suburbs",
+    "capacity": "40k Orders/Day",
+    "services": ["Dark Store", "Last-Mile"]
+  },
+  {
+    "code": "TMK4",
+    "name": "Chembur",
+    "fullName": "TMK4 - Chembur",
+    "lat": 19.052444,
+    "lng": 72.901528,
+    "zone": "Eastern Suburbs",
+    "capacity": "42k Orders/Day",
+    "services": ["Dark Store", "Last-Mile"]
   }
 ]

@@ -2,7 +2,7 @@ import MetricsTicker from "../components/MetricsTicker";
 import amazonLogo from "../assets/Amazon_Logo_0.svg";
 import blinkitLogo from "../assets/Blinki_Logo_0.svg";
 import zeptoLogo from "../assets/Zepto_Logo_0.svg";
-import homeBackground from "../assets/HomeBackground.png";
+import homeBackground from "../assets/HomemainBg.png";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
             alt="Fresh & Select market"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-cream/90 via-cream/65 to-cream/35" />
+          <div className="absolute inset-0 bg-gradient-to-b from-cream/60 via-cream/35 to-cream/10" />
         </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 text-center">

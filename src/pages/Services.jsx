@@ -6,9 +6,15 @@ import {
   CheckCircle2,
 } from "lucide-react";
 
+import DarkStoreManagementImg from "../assets/DarkStoreManagement.jpeg";
+import ManpowerImg from "../assets/Manpower.jpeg";
+import InventoryIntelligenceImg from "../assets/InventoryIntelligence.jpeg";
+import StoreDesignImg from "../assets/StoreDesign.jpeg";
+
 const services = [
   {
     icon: <Warehouse className="w-8 h-8" />,
+    image: DarkStoreManagementImg,
     title: "Dark Store Management",
     description:
       "Complete facility setup including racking systems, dispatch zones, staging areas, and real-time inventory management. We handle every aspect—from warehouse design to daily operations—so platforms can focus on growth.",
@@ -21,6 +27,7 @@ const services = [
   },
   {
     icon: <Users className="w-8 h-8" />,
+    image: ManpowerImg,
     title: "Manpower & Training",
     description:
       "Recruitment, training, and management of specialized pickers, packers, and supervisors for high-velocity dark store environments. FIFO-certified staff ensuring <2 minute average pack times.",
@@ -33,6 +40,7 @@ const services = [
   },
   {
     icon: <BarChart3 className="w-8 h-8" />,
+    image: InventoryIntelligenceImg,
     title: "Inventory Intelligence",
     description:
       "Data-driven inventory management powered by analytics dashboards. Our tech stack monitors shrinkage, tracks expiry, optimizes pick-paths, and maintains 99.9% inventory accuracy in real-time.",
@@ -45,6 +53,7 @@ const services = [
   },
   {
     icon: <Warehouse className="w-8 h-8" />,
+    image: StoreDesignImg,
     title: "Precision Store Design",
     description:
       "Precision-based dark store layout designed for speed, accuracy, and space efficiency. Layout engineering is paired with real-time inventory synchronization to keep every SKU in the right place.",
@@ -118,17 +127,14 @@ export default function Services() {
                 </div>
 
                 {/* Visual Side */}
-                <div className="lg:w-80 bg-gradient-to-br from-forest/5 to-sap/5 flex items-center justify-center p-12">
-                  <div className="text-forest/10 group-hover:text-forest/20 transition-all duration-500 transform group-hover:scale-110">
-                    <div className="w-32 h-32">
-                      {service.icon &&
-                        // Clone  with larger size
-                        (() => {
-                          const Icon = service.icon.type;
-                          return <Icon className="w-32 h-32" strokeWidth={0.5} />;
-                        })()}
-                    </div>
-                  </div>
+                <div className="lg:w-80 bg-gradient-to-br from-forest/5 to-sap/5 relative min-h-[300px]">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="absolute inset-0 w-full h-full object-cover object-center transition-all duration-500 group-hover:scale-105"
+                    style={{ borderRadius: 'inherit' }}
+                  />
+                  <div className="absolute inset-0 bg-white/10" style={{ borderRadius: 'inherit' }} />
                 </div>
               </div>
             </div>

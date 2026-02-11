@@ -54,7 +54,7 @@ export default function Navbar() {
             <img
               src={logoSrc}
               alt="Fresh & Select"
-              className="h-10 w-auto sm:h-12"
+              className="h-20 w-auto sm:h-20"
             />
           </a>
 
@@ -64,7 +64,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-forest/70 hover:text-forest transition-colors duration-200"
+                className="text-lg font-semibold text-forest/80 hover:text-forest transition-colors duration-200"
               >
                 {link.label}
               </a>
