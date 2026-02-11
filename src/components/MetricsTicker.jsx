@@ -44,7 +44,7 @@ function AnimatedCounter({ end, suffix = "", duration = 2000 }) {
 export default function MetricsTicker() {
   const metrics = [
     {
-      value: 25,
+      value: 20,
       suffix: "+",
       label: "Dark Store Operations",
       icon: (
